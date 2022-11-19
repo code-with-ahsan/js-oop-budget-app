@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <script type="module" crossorigin src="/assets/index.cc4476a3.js"></script>
+  <link rel="stylesheet" href="/assets/index.3aafadeb.css">
+</head>
+<body class="bg-white flex flex-col sm:flex-row">
+  <main class="p-6 flex-1 h-full border-transparent rounded-tl-[30px] rounded-bl-[30px] bg-light-gray">
+    <section class="main-section h-full">
+      <h3 class="font-bold mb-6">Transactions</h3>
+      <div class="main-section__transactions">
+        
+      </div>
+    </section>
+  </main>
+  <aside class="p-6 sidebar border-transparent rounded-tr-[30px] rounded-br-[30px] w-full sm:w-[320px] bg-lighter-gray">
+    <h4 class="sidebar__heading font-bold mb-6">New Transaction</h4>
+    <form class="sidebar__form flex flex-col gap-4">
+      <input type="text" name="title" placeholder="Title" maxlength="30" required/>
+      <div>
+        <label>Category</label>
+        <select id="categoriesEl" name="category" required>
+        </select>
+      </div>
+      <div>
+        <label>Type</label>
+        <select id="transactionTypeEl" name="type">
+          <option value="debit">Debit</option>
+          <option value="credit">Credit</option>
+        </select>
+      </div>
+      <input type="number" name="amount" min="1" placeholder="Amount (number)" required />
+      <div class="flex gap-4 justify-end transaction-form-actions">
+        <button type="button" class="text-slate-600 bg-slate-100" id="entryCancelBtn" hidden>Cancel</button>
+        <button type="submit" class="text-sky-600 bg-blue-100" id="entrySubmitBtn">Create</button>
+      </div>
+    </form>
+    <div class="sidebar__wallets">
+      <div class="sidebar__wallets__heading font-bold mb-6">Wallets</div>
+      <ul class="sidebar__wallets__list">
+      </ul>
+    </div>
+  </aside>
+  
+</body>
+</html>
